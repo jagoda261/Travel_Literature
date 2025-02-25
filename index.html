@@ -18,21 +18,35 @@
       background-size: cover;
     }
 
-    /* Kopfbereich (Header) */
+    /* Kopfbereich (Header) – vergrößert und zentriert */
     header {
       background-color: #ccc;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      text-align: center;       /* Zentriert */
+      padding: 2rem;           /* Vergrößerte Innenabstände */
+      font-size: 1.5rem;       /* Größere Schriftgröße */
     }
 
     header h1 {
       margin: 0;
     }
 
-    /* Suchfeld im Header (Platzhalter) */
-    header input[type="search"] {
+    /* Zusätzliche Leiste zwischen Header und Inhalt */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f1f1f1;
+      padding: 1rem;
+      margin-bottom: 1rem;     /* Abstand nach unten */
+      border: 1px solid #ccc;  /* Kasten-Rahmen */
+    }
+
+    .top-bar .description {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .top-bar input[type="search"] {
       padding: 0.5rem;
       font-size: 1rem;
     }
@@ -40,7 +54,7 @@
     /* Container für den linken Bereich (Navigation) und den Hauptinhalt */
     .container {
       display: flex;
-      min-height: calc(100vh - 60px); /* Abzug der Header-Höhe, ungefähr */
+      min-height: calc(100vh - 60px); /* Beispiel: Abzug der Header-Höhe, anpassbar */
     }
 
     /* Navigation auf der linken Seite */
@@ -56,18 +70,17 @@
 
     nav li {
       margin-bottom: 0.5rem;
-      /* Platzhalter-Styling für Links */
       cursor: pointer;
     }
 
-    /* Hauptbereich (Vorstellung/Vorschau der Seite) */
+    /* Hauptbereich (Vorstellung / Vorschau der Seite) */
     main {
       flex: 1;
       background-color: #fafafa;
       padding: 1rem;
     }
 
-    /* (Optional) Footer-Bereich */
+    /* Footer-Bereich (optional) */
     footer {
       background-color: #ccc;
       text-align: center;
@@ -77,12 +90,19 @@
 </head>
 <body>
 
+  <!-- Header (zentriert, vergrößert) -->
   <header>
     <h1>Header</h1>
-    <input type="search" placeholder="Suche...">
   </header>
 
+  <!-- Zusätzliche Leiste zwischen Header und Hauptinhalt -->
+  <div class="top-bar">
+    <span class="description">Reisende</span>
+    <input type="search" placeholder="Suche...">
+  </div>
+
   <div class="container">
+    <!-- Navigation links mit Reisenden -->
     <nav>
       <ul>
         <li>Reisender 1</li>
@@ -93,6 +113,7 @@
       </ul>
     </nav>
 
+    <!-- Hauptbereich mit Vorschau / Vorstellung der Seite -->
     <main>
       <h2>Vorstellung / Vorschau der Seite</h2>
       <p>
