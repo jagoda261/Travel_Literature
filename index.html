@@ -2,85 +2,69 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Reiserouten von Autoren</title>
+  <title>Startseite</title>
   <style>
-    /* Grundlegendes Seitenstyling */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: Arial, sans-serif;
-      /* Platzhalter-Hintergrundbild, bitte bei Bedarf ersetzen */
       background: url("pfad/zum/hintergrundbild.jpg") no-repeat center center fixed;
       background-size: cover;
     }
-
-    /* Kopfbereich (Header) – vergrößert und zentriert */
     header {
       background-color: #ccc;
-      text-align: center;       /* Zentriert */
-      padding: 2rem;           /* Vergrößerte Innenabstände */
-      font-size: 1.5rem;       /* Größere Schriftgröße */
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.5rem;
     }
-
     header h1 {
       margin: 0;
     }
-
-    /* Zusätzliche Leiste zwischen Header und Inhalt */
     .top-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
       background-color: #f1f1f1;
       padding: 1rem;
-      margin-bottom: 1rem;     /* Abstand nach unten */
-      border: 1px solid #ccc;  /* Kasten-Rahmen */
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
     }
-
     .top-bar .description {
       font-weight: bold;
       font-size: 1.2rem;
     }
-
     .top-bar input[type="search"] {
       padding: 0.5rem;
       font-size: 1rem;
     }
-
-    /* Container für den linken Bereich (Navigation) und den Hauptinhalt */
     .container {
       display: flex;
-      min-height: calc(100vh - 60px); /* Beispiel: Abzug der Header-Höhe, anpassbar */
+      min-height: calc(100vh - 60px);
     }
-
-    /* Navigation auf der linken Seite */
     nav {
       width: 20%;
       background-color: #eee;
       padding: 1rem;
     }
-
     nav ul {
       list-style-type: none;
     }
-
     nav li {
       margin-bottom: 0.5rem;
-      cursor: pointer;
     }
-
-    /* Hauptbereich (Vorstellung / Vorschau der Seite) */
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
     main {
       flex: 1;
       background-color: #fafafa;
       padding: 1rem;
     }
-
-    /* Footer-Bereich (optional) */
     footer {
       background-color: #ccc;
       text-align: center;
@@ -90,30 +74,25 @@
 </head>
 <body>
 
-  <!-- Header (zentriert, vergrößert) -->
   <header>
     <h1>Header</h1>
   </header>
 
-  <!-- Zusätzliche Leiste zwischen Header und Hauptinhalt -->
   <div class="top-bar">
     <span class="description">Reisende</span>
     <input type="search" placeholder="Suche...">
   </div>
 
   <div class="container">
-    <!-- Navigation links mit Reisenden -->
     <nav>
       <ul>
-        <li>Reisender 1</li>
+        <!-- Hier der Link zu Reisender1.html -->
+        <li><a href="Reisender1.html">Reisender 1</a></li>
         <li>Reisender 2</li>
         <li>Reisender 3</li>
-        <li>Reisender 4</li>
-        <!-- usw. -->
       </ul>
     </nav>
 
-    <!-- Hauptbereich mit Vorschau / Vorstellung der Seite -->
     <main>
       <h2>Vorstellung / Vorschau der Seite</h2>
       <p>
@@ -124,7 +103,6 @@
   </div>
 
   <footer>
-    <!-- Optional: Footer-Inhalt -->
     <p>Footer Bereich (Copyright, Impressum etc.)</p>
   </footer>
 
