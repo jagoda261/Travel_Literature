@@ -24,14 +24,19 @@
       align-items: center;
     }
 
-    header img {
-      width: 50px; /* Größe des Logos anpassen */
-      height: auto;
+    /* Logo mit Link zur Hauptseite */
+    header a {
       margin-right: 1rem;
+      text-decoration: none;
+    }
+    header img {
+      width: 50px; 
+      height: auto;
     }
 
     header h1 {
       font-size: 1.5rem;
+      margin: 0;
     }
 
     /* Layout Container */
@@ -75,7 +80,10 @@
 <body>
 
   <header>
-    <img src="https://jagoda261.github.io/Travel_literature/Logo_Travel.png">
+    <!-- Das Logo führt zurück zur Startseite -->
+    <a href="index.html">
+      <img src="pfad/zum/logo.png" alt="Logo">
+    </a>
     <h1>Reisender 1</h1>
   </header>
 
@@ -86,13 +94,14 @@
       <ul>
         <li>Route 1</li>
         <li>Route 2</li>
-        <li>...</li>
+        <!-- usw. -->
       </ul>
     </nav>
 
     <main>
       <h2>Bio</h2>
       <p>Hier kann die Biografie des Reisenden stehen.</p>
+      <!-- Weitere Inhalte zur Route etc. -->
     </main>
   </div>
 
