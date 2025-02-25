@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Reisender 1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url("pfad/zum/hintergrundbild.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Header mit Logo */
+    header {
+      background-color: #ccc;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      width: 50px; /* Größe des Logos anpassen */
+      height: auto;
+      margin-right: 1rem;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    /* Layout Container */
+    .container {
+      display: flex;
+      height: calc(100vh - 60px);
+    }
+
+    /* Navigation links */
+    nav {
+      width: 20%;
+      background-color: #eee;
+      padding: 1rem;
+    }
+
+    nav ul {
+      list-style-type: none;
+    }
+
+    nav li {
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+
+    /* Hauptbereich */
+    main {
+      flex: 1;
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+
+    /* Top-Bar für "Reisender" */
+    .top-bar {
+      background-color: #f1f1f1;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://jagoda261.github.io/Travel_literature/Logo_Travel.jpg">
+    <h1>Reisender 1</h1>
+  </header>
+
+  <div class="top-bar">Reisender</div>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li>Route 1</li>
+        <li>Route 2</li>
+        <li>...</li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Bio</h2>
+      <p>Hier kann die Biografie des Reisenden stehen.</p>
+    </main>
+  </div>
+
+</body>
+</html>
