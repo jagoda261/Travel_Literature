@@ -11,9 +11,12 @@
     }
     body {
       font-family: Arial, sans-serif;
+      /* Beispiel-Hintergrundbild (bitte anpassen/entfernen, wenn nötig) */
       background: url("pfad/zum/hintergrundbild.jpg") no-repeat center center fixed;
       background-size: cover;
     }
+
+    /* Header-Bereich */
     header {
       background-color: #ccc;
       text-align: center;
@@ -23,48 +26,72 @@
     header h1 {
       margin: 0;
     }
+
+    /* Zusätzliche Leiste zwischen Header und Hauptinhalt */
     .top-bar {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end; /* nach rechts schieben */
       background-color: #f1f1f1;
       padding: 1rem;
       margin-bottom: 1rem;
       border: 1px solid #ccc;
     }
-    .top-bar .description {
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
+
+    /* --> "Reisende" (description) wurde entfernt! <-- */
+
     .top-bar input[type="search"] {
       padding: 0.5rem;
       font-size: 1rem;
     }
+
     .container {
       display: flex;
-      min-height: calc(100vh - 60px);
+      /* je nach Bedarf Höhe anpassen */
+      min-height: calc(100vh - 60px); 
     }
+
+    /* Linke Seitenleiste */
     nav {
       width: 20%;
       background-color: #eee;
       padding: 1rem;
     }
+
+    /* UL/LI entfernen Standard-Aufzählung */
     nav ul {
       list-style-type: none;
     }
+
+    /* 
+       Jede Zeile in der Seitenleiste als eigene Box, 
+       damit es sich über die gesamte graue Breite erstreckt.
+    */
     nav li {
       margin-bottom: 0.5rem;
     }
-    nav a {
+    nav li a {
+      display: block;
+      background-color: #ddd;
+      padding: 0.75rem;
       text-decoration: none;
       color: #333;
+      font-size: 1.1rem;   /* etwas größere Schrift */
       font-weight: bold;
+      border: 1px solid #ccc;
     }
+    nav li a:hover {
+      background-color: #ccc;
+    }
+
+    /* Hauptinhalt rechts */
     main {
       flex: 1;
       background-color: #fafafa;
       padding: 1rem;
     }
+
+    /* Footer (optional) */
     footer {
       background-color: #ccc;
       text-align: center;
@@ -78,18 +105,18 @@
     <h1>Header</h1>
   </header>
 
+  <!-- top-bar OHNE "Reisende" -->
   <div class="top-bar">
-    <span class="description">Reisende</span>
     <input type="search" placeholder="Suche...">
   </div>
 
   <div class="container">
     <nav>
       <ul>
-        <!-- Hier der Link zu Reisender1.html -->
+        <!-- Jede Zeile als Link, damit wir Boxen haben -->
         <li><a href="Reisender1.html">Reisender 1</a></li>
-        <li>Reisender 2</li>
-        <li>Reisender 3</li>
+        <li><a href="#">Reisender 2</a></li>
+        <li><a href="#">Reisender 3</a></li>
       </ul>
     </nav>
 
