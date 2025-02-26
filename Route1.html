@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Route 1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      /* Hintergrundbild ggf. anpassen */
+      background: url("pfad/zum/hintergrundbild.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      background-color: #ccc;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Logo links, Tabs rechts */
+    }
+    header img {
+      width: 60px; /* Logo-Größe anpassen */
+      height: auto;
+      margin-right: 1rem;
+    }
+    /* Tabs im Header: Reisender, Route 1, Karte */
+    .header-tabs a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+
+    /* Flex-Container für die linke Spalte (Orte) und den Hauptinhalt */
+    .container {
+      display: flex;
+      min-height: calc(100vh - 60px); /* Platz für Header abziehen, je nach Bedarf */
+    }
+
+    /* Linke Spalte für Ort1, Ort2, ... */
+    aside {
+      width: 20%;
+      background-color: #eee;
+      padding: 1rem;
+    }
+    aside ul {
+      list-style-type: none;
+    }
+    aside li {
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Hauptbereich rechts (Beschreibung, Mitreisende) */
+    main {
+      flex: 1;
+      background-color: #fafafa;
+      padding: 1rem;
+    }
+    main h2 {
+      margin-bottom: 0.5rem;
+    }
+    main p {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Logo, beim Klick z.B. zurück zur Hauptseite oder zur Reisender.html -->
+    <a href="index.html">
+      <img src="pfad/zum/Logo_Travel.png" alt="Logo">
+    </a>
+    <!-- Tabs im Header -->
+    <nav class="header-tabs">
+      <a href="Reisender.html">Reisender</a>
+      <a href="Route1.html">Route 1</a>
+      <a href="#">Karte</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Linke Spalte mit Orten -->
+    <aside>
+      <ul>
+        <li>Ort 1</li>
+        <li>Ort 2</li>
+        <li>Ort 3</li>
+        <!-- usw. -->
+      </ul>
+    </aside>
+
+    <!-- Hauptinhalt: Beschreibung, Mitreisende -->
+    <main>
+      <h2>Beschreibung Route</h2>
+      <p>
+        Hier kannst du die Details zur Route erläutern. Was passiert auf dem Weg?
+      </p>
+
+      <h2>Mitreisende</h2>
+      <p>
+        Hier kannst du beschreiben, wer alles dabei war.  
+      </p>
+    </main>
+  </div>
+
+</body>
+</html>
