@@ -15,15 +15,12 @@
       /* Beispiel-Hintergrund – bei Bedarf anpassen oder entfernen */
       background: url("pfad/zum/hintergrundbild.jpg") no-repeat center center fixed;
       background-size: cover;
-      /* Body als Spalte anordnen, damit der Header oben und der Inhalt darunter kommt */
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
-    /* 
-      Header: Logo links, zwei Boxen („Reisender“ & „Karte“) rechts 
-    */
+    /* Header: Logo links, 2 Boxen (Reisender & Karte) rechts */
     header {
       display: flex;
       align-items: center;
@@ -41,15 +38,14 @@
       height: auto;
     }
 
-    /* Navigation rechts: wir schieben den ganzen Bereich nach rechts,
-       indem wir .nav-section margin-left: auto geben */
+    /* Navigation rechts: .nav-section schiebt sich mit margin-left: auto nach rechts */
     .nav-section {
       display: flex;
       margin-left: auto;  
       align-items: center;
     }
 
-    /* Boxen: Reisender, Karte */
+    /* Zwei Boxen: Reisender und Karte */
     .nav-box {
       display: flex;
       align-items: center;
@@ -58,34 +54,31 @@
       text-decoration: none;
       color: #333;
       font-weight: bold;
-      font-size: 1.2rem;  /* Größere Schrift */
+      font-size: 1.2rem;        /* Größere Schrift */
       margin-left: 0.5rem;
       border: 1px solid #ccc;
-      /* Du kannst eine feste Höhe einstellen, wenn du möchtest */
-      height: 3rem; 
+      height: 3rem;            /* Höhe anpassen nach Bedarf */
     }
-
-    /* „Reisender“: etwas schmaler */
+    /* „Reisender“ etwas schmaler */
     .nav-box.reisender {
-      width: 150px; /* Anpassen nach Belieben */
+      width: 150px;
     }
-
-    /* „Karte“: deutlich größer (breiter) */
+    /* „Karte“ deutlich breiter */
     .nav-box.karte {
-      width: 250px; /* Anpassen nach Belieben */
+      width: 250px;
     }
-
     .nav-box:hover {
       background-color: #ddd;
     }
 
     /* 
       Content: unter dem Header 
-      links aside (Orte), rechts main (Beschreibung, Mitreisende)
+      Links: Orte (Boxen) 
+      Rechts: Beschreibung
     */
     .content {
       display: flex;
-      flex: 1; /* füllt den restlichen Platz aus */
+      flex: 1; /* Füllt den restlichen Platz */
     }
 
     aside {
@@ -93,13 +86,27 @@
       background-color: #eee;
       padding: 1rem;
     }
+
+    /* Boxen in der Seitenleiste */
     aside ul {
       list-style: none;
     }
     aside li {
       margin-bottom: 0.5rem;
+    }
+    /* Jeder Ort als eigene Box (Link, falls du es später verlinken willst) */
+    aside li a {
+      display: block;
+      background-color: #ddd;
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-decoration: none;
+      color: #333;
+      font-size: 1.1rem;       /* etwas größere Schrift */
       font-weight: bold;
-      cursor: pointer;
+    }
+    aside li a:hover {
+      background-color: #ccc;
     }
 
     main {
@@ -113,41 +120,40 @@
     main p {
       margin-bottom: 1rem;
     }
+
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header mit Logo links, 2 Boxen rechts -->
   <header>
-    <!-- Logo links -->
     <div class="logo-box">
-      <!-- Klick führt z.B. zurück zur Startseite -->
+      <!-- Klick führt z.B. zurück zur Hauptseite -->
       <a href="index.html">
         <img src="Logo_Travel.png" alt="Logo">
       </a>
     </div>
 
-    <!-- Navigation nach rechts verschoben -->
     <nav class="nav-section">
       <a href="Reisender1.html" class="nav-box reisender">Reisender</a>
       <a href="#" class="nav-box karte">Karte</a>
     </nav>
   </header>
 
-  <!-- Hauptinhalt: Orte links, Beschreibung rechts -->
+  <!-- Inhalt: links Orte, rechts Beschreibung -->
   <div class="content">
     <aside>
       <ul>
-        <li>Ort 1</li>
-        <li>Ort 2</li>
-        <li>Ort 3</li>
+        <li><a href="#">Ort 1</a></li>
+        <li><a href="#">Ort 2</a></li>
+        <li><a href="#">Ort 3</a></li>
       </ul>
     </aside>
 
     <main>
       <h2>Beschreibung Route</h2>
       <p>
-        Hier kannst du Details zur Route erläutern: Was passiert auf dem Weg? Wann und wie wurde gereist?
+        Hier kannst du die Details zur Route erläutern: Was passiert auf dem Weg? Wann und wie wurde gereist?
       </p>
 
       <h2>Mitreisende</h2>
