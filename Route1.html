@@ -12,65 +12,90 @@
 
     body {
       font-family: Arial, sans-serif;
-      /* Beispiel-Hintergrund – bei Bedarf anpassen */
+      /* Beispiel-Hintergrund – bei Bedarf anpassen oder entfernen */
       background: url("pfad/zum/hintergrundbild.jpg") no-repeat center center fixed;
       background-size: cover;
-      display: flex;             /* Ermöglicht, dass die linke Spalte und der Hauptteil nebeneinander liegen */
-      min-height: 100vh;         /* Damit das Layout die gesamte Höhe einnimmt */
-    }
-
-    /* Linke Spalte: Logo, Navigationsboxen, Orte */
-    .left-panel {
-      width: 25%;                /* Breite der linken Spalte anpassen */
-      background-color: #eee;    /* Hintergrund der linken Spalte */
+      /* Wir platzieren den Hauptinhalt unter dem Header */
       display: flex;
-      flex-direction: column;    /* Stapelt die Boxen untereinander */
-      padding: 1rem;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    /* Box fürs Logo oben links */
+    /* 
+      Kopfzeile (Header) mit Logo links und daneben 
+      drei Boxen: Reisender, Route1, Karte 
+    */
+    header {
+      background-color: #ccc;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Logo links im Header */
     .logo-box {
-      margin-bottom: 1rem;       /* Abstand nach unten */
+      margin-right: 1rem;
     }
     .logo-box img {
-      width: 80px;               /* Logo-Größe anpassen */
+      width: 60px; /* Logo-Größe anpassen */
       height: auto;
     }
 
-    /* Navigations-Container für Reisender, Route, Karte */
+    /* Container für die drei Nav-Boxen (Reisender, Route1, Karte) */
     .nav-section {
-      margin-bottom: 1rem;
+      display: flex;       /* Alle Boxen nebeneinander */
+      align-items: center;
     }
 
-    /* Jede einzelne Box für Reisender / Route / Karte */
+    /*
+      Jede Box als Link, damit sie sich optisch abgrenzt.
+      Du kannst margin-right anpassen, um den Abstand zu variieren.
+    */
     .nav-box {
-      display: block;            /* Volle Breite klickbar */
       background-color: #f1f1f1;
-      margin-bottom: 0.5rem;
-      padding: 0.5rem;
       border: 1px solid #ccc;
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem;
+      text-decoration: none; 
       color: #333;
       font-weight: bold;
-      text-decoration: none;     /* Keine Unterstreichung */
     }
 
     .nav-box:hover {
-      background-color: #ddd;    /* Hover-Effekt, falls gewünscht */
+      background-color: #ddd; /* Kleiner Hover-Effekt */
     }
 
-    /* Liste der Orte darunter */
-    .places ul {
+    /*
+      Hauptcontainer für die Bereiche „Orte“ (aside) und 
+      Hauptinhalt (main) unter dem Header
+    */
+    .content {
+      display: flex;
+      flex: 1;          /* Füllt den restlichen Platz des Viewports */
+    }
+
+    /*
+      Linke Spalte für die Orte
+    */
+    aside {
+      width: 20%;
+      background-color: #eee;
+      padding: 1rem;
+    }
+    aside ul {
       list-style: none;
     }
-    .places li {
+    aside li {
       margin-bottom: 0.5rem;
       font-weight: bold;
       cursor: pointer;
     }
 
-    /* Hauptinhalt auf der rechten Seite */
+    /*
+      Rechter Hauptbereich: Beschreibung, Mitreisende
+    */
     main {
-      flex: 1;                   /* Hauptbereich füllt den restlichen Platz */
+      flex: 1;
       background-color: #fafafa;
       padding: 1rem;
     }
@@ -84,49 +109,47 @@
 </head>
 <body>
 
-  <!-- Linke Spalte -->
-  <div class="left-panel">
-
-    <!-- Logo-Box -->
+  <!-- Header-Bereich mit Logo und Boxen -->
+  <header>
+    <!-- Logo-Link (führt z.B. zur Hauptseite) -->
     <div class="logo-box">
-      <!-- Klick führt z.B. zurück zur Hauptseite oder Reisender-Seite -->
       <a href="index.html">
         <img src="Logo_Travel.png" alt="Logo">
       </a>
     </div>
 
-    <!-- Navigation: Reisender, Route, Karte, jeweils eigene Box -->
+    <!-- Drei Nav-Boxen nebeneinander -->
     <nav class="nav-section">
       <a href="Reisender.html" class="nav-box">Reisender</a>
       <a href="Route1.html" class="nav-box">Route 1</a>
       <a href="#" class="nav-box">Karte</a>
     </nav>
+  </header>
 
-    <!-- Liste der Orte in dieser Route -->
-    <div class="places">
+  <!-- Darunter: Seitenspalte (Orte) und Hauptinhalt -->
+  <div class="content">
+    <aside>
       <ul>
         <li>Ort 1</li>
         <li>Ort 2</li>
         <li>Ort 3</li>
-        <!-- usw. -->
+        <!-- weitere Orte -->
       </ul>
-    </div>
+    </aside>
 
+    <main>
+      <h2>Beschreibung Route</h2>
+      <p>
+        Hier kannst du Details zur Route erläutern. 
+        Was passiert auf dem Weg? Wann und wie wurde gereist?
+      </p>
+
+      <h2>Mitreisende</h2>
+      <p>
+        Wer war dabei? Beschreibe weitere Personen, spannende Anekdoten usw.
+      </p>
+    </main>
   </div>
-
-  <!-- Hauptbereich: Beschreibung / Mitreisende -->
-  <main>
-    <h2>Beschreibung Route</h2>
-    <p>
-      Hier kannst du die Details zur Route erläutern. Was passiert auf dem Weg?
-      Wann und wie wurde gereist?
-    </p>
-
-    <h2>Mitreisende</h2>
-    <p>
-      Beschreibe, wer alles dabei war und vielleicht besondere Anekdoten.
-    </p>
-  </main>
 
 </body>
 </html>
